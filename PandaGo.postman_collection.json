@@ -1,0 +1,82 @@
+{
+	"variables": [],
+	"info": {
+		"name": "PandaGo",
+		"_postman_id": "db230d11-117f-2be0-b2dd-aa8656d31eeb",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"url": "http://localhost/api/getAll",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get all vehicles"
+			},
+			"response": []
+		},
+		{
+			"name": "getByFilters",
+			"request": {
+				"url": {
+					"raw": "http://localhost/api/getByFilters?valoration=3&brand&price&type&autonomy&speed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"getByFilters"
+					],
+					"query": [
+						{
+							"key": "valoration",
+							"value": "3",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "brand",
+							"value": "",
+							"equals": false,
+							"description": ""
+						},
+						{
+							"key": "price",
+							"value": "",
+							"equals": false,
+							"description": ""
+						},
+						{
+							"key": "type",
+							"value": "",
+							"equals": false,
+							"description": ""
+						},
+						{
+							"key": "autonomy",
+							"value": "",
+							"equals": false,
+							"description": ""
+						},
+						{
+							"key": "speed",
+							"value": "",
+							"equals": false,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get vehicles by Filters"
+			},
+			"response": []
+		}
+	]
+}
