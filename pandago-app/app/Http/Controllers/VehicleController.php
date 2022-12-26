@@ -30,7 +30,6 @@ class VehicleController extends Controller
     {
         try
         {
-            Log::debug($request->all());
             return response()->json([
                 'status' => 'Success',
                 'data' => Vehicle::getByFilters($request->all())

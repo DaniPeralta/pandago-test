@@ -60,6 +60,6 @@ class Vehicle extends Model
 
     public static function getByFilters($where)
     {
-        return self::where($where)->get();
+        return self::where($where)->get()->load('requirements', 'uses', 'client_types');
     }
 }
