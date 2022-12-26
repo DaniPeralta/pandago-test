@@ -17,8 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
+            $table->string('type');
             $table->float('price');
             $table->float('valoration');
+            $table->float('autonomy');
             $table->integer('contract_duration');
             $table->string('brand');
             $table->integer('speed');
