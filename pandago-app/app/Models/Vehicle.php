@@ -39,7 +39,7 @@ class Vehicle extends Model
      */
     public function uses()
     {
-        return $this->morphToMany(UseV::class, 'vehicle_use');
+        return $this->belongsToMany(UseV::class, 'vehicle_use', 'use_id','vehicle_id');
     }
 
     /**
@@ -47,7 +47,7 @@ class Vehicle extends Model
      */
     public function requirements()
     {
-        return $this->morphToMany(Requirement::class, 'vehicle_requirements');
+        return $this->belongsToMany(Requirement::class, 'vehicle_requirements', 'requirement_id','vehicle_id');
     }
 
     /**
@@ -55,7 +55,11 @@ class Vehicle extends Model
      */
     public function client_types()
     {
-        return $this->morphToMany(ClientType::class, 'vehicle_client_type');
+        return $this->belongsToMany(ClientType::class, 'vehicle_client_type', 'client_type_id','vehicle_id');
     }
 
+    public static function getByFilters($where)
+    {
+        return self::where($where)->get();
+    }
 }
