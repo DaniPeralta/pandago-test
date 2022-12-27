@@ -5,7 +5,7 @@ Repo to do technical test
 
 On aplication root is the PDF document with the database model and its explanation.
 
-* RUN *
+*RUN*
 
 This is a Laravel Sail application (Docker). We have found that for testing purposes, this is about the best approach there is. To bring the application up locally, (with Docker installed) simply cd to the project and run:
 
@@ -21,7 +21,7 @@ docker run --rm \
 
 ## Run project
 
-* .env.example prepared to used as .env *
+*.env.example prepared to used as .env*
 
 ```
 cd pandago-app
@@ -32,7 +32,7 @@ cp .env.example .env
 ```
 When you do the migration, you will already have test data loaded into the database.
 
-## TEST
+## Test
 
 On aplication root is a postman .json with two endpoints to test the aplication.
 
